@@ -23,7 +23,7 @@ type SettingsSetters<T> = {
   [key: string]: (value: T) => void,
 }
 
-function withSettings<T extends number | string>({ settings: settingsConfigs }: { settings: Settings }) {
+export function withSettings<T extends number | string>({ settings: settingsConfigs }: { settings: Settings }) {
 
   return (Component: React.ComponentType<any>) => (props: any) => {
     const controls: React.ReactElement[] = [];
@@ -81,5 +81,3 @@ function withSettings<T extends number | string>({ settings: settingsConfigs }: 
     );
   };
 };
-
-export default withSettings;

@@ -1,5 +1,5 @@
 import React from 'react';
-import withSettings from './withSettings';
+import { withSettings } from './withSettings';
 
 type LockProps = {
   height: number,
